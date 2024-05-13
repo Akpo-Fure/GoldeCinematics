@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import fontSizes from "../../constants/fonts";
 import colors from "../../constants/colors";
-import { NavBarData } from "../../interfaces/interface";
+import { INavBarData } from "../../interfaces/interface";
 import GoldeCinematicsLogo from "../../assets/GoldeCinematicsLogo.png";
 
 const NavBarContainer = styled.div`
@@ -57,7 +57,7 @@ const NavBar = () => {
 
   return (
     <NavBarContainer>
-      {navBarData.map((data: NavBarData) => {
+      {navBarData.map((data: INavBarData) => {
         return data.isIcon ? (
           <img src={data.icon} alt={data.name} width={60} height={50} />
         ) : (

@@ -3,6 +3,7 @@ import colors from "../../constants/colors";
 import NavBar from "./NavBar";
 import HeroText from "./HeroText";
 import VideoComponent from "./Video";
+import Sponsors from "./Sponsors";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -21,12 +22,17 @@ const HeroComponent = () => {
         <NavBar />
         <HeroText />
       </HeroContainer>
-      <div
-        style={{
-          margin: "0 2.5em",
-        }}
-      >
+      <div>
         <VideoComponent />
+        <div
+          style={{
+            margin: "0 7.5em",
+            height: "40px",
+            borderLeft: `1.5px solid ${colors.orange1}`,
+            borderRight: `1.5px solid ${colors.orange1}`,
+          }}
+        ></div>
+        <Sponsors />
       </div>
     </div>
   );

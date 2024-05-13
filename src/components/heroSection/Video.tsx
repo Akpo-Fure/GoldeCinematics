@@ -8,6 +8,7 @@ const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 2.5em;
   gap: 1em;
 `;
 
