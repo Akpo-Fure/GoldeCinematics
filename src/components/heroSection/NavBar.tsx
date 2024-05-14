@@ -10,8 +10,12 @@ const NavBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3em;
+  gap: 4em;
   padding: 1.5em;
+
+  @media ${device.laptop} {
+    gap: 3em;
+  }
 
   @media ${device.tablet} {
     display: none;
@@ -129,10 +133,13 @@ const NavBar = () => {
             display: isNavBarOpen ? "flex" : "none",
             flexDirection: "column",
             gap: "1em",
+            transform: isNavBarOpen ? "translateY(0)" : "translateY(-100%)",
+            transition: "transform 0.3s ease, opacity 0.3s ease",
+            opacity: isNavBarOpen ? 1 : 0,
           }}
         >
           {navBarData
-            .filter((data) => data.name !== "GOLDE CINEMATICS")
+            .filter((data) => data.isIcon === false)
             .map((data: INavBarData) => (
               <NavLink
                 href={data.link}

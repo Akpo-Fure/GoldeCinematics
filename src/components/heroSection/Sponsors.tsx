@@ -21,10 +21,14 @@ const SponsorsContainer = styled.div`
 
   @media ${device.tablet} {
     margin: 0 1em;
+    gap: 1.5em;
+    padding: 1.5em;
   }
 
   @media ${device.mobile} {
     margin: 0em;
+    gap: 1em;
+    padding: 1em;
   }
 `;
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import fontSizes from "../../constants/fonts";
 import colors from "../../constants/colors";
 import device from "../../constants/breakpoints";
+import { HeroSpan, SmallSpan } from "../shared/Span";
 
 const HeroTextContainer = styled.div`
   display: flex;
@@ -14,46 +15,6 @@ const HeroTextContainer = styled.div`
 
   @media ${device.tablet} {
     padding: 2em 0em;
-  }
-`;
-
-const HeroSpan = styled.span`
-  font-size: ${fontSizes.xxxxxxxl};
-  font-weight: bold;
-  color: ${({ color }) => color || colors.white1};
-  text-align: center;
-  margin: 0;
-  line-height: 1;
-
-  @media ${device.desktop} {
-    font-size: ${fontSizes.xxxxxxl};
-  }
-  @media ${device.laptop} {
-    font-size: ${fontSizes.xxxxxl};
-  }
-
-  @media ${device.tablet} {
-    font-size: ${fontSizes.xxxxl};
-  }
-`;
-
-const SmallSpan = styled.span`
-  font-size: ${fontSizes.xl};
-  font-family: sans-serif;
-  color: ${colors.white1};
-  text-align: center;
-  margin: 0;
-
-  @media ${device.desktop} {
-    font-size: ${fontSizes.xl};
-  }
-
-  @media ${device.tablet} {
-    font-size: ${fontSizes.l};
-  }
-
-  @media ${device.mobile} {
-    font-size: ${fontSizes.m};
   }
 `;
 
