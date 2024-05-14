@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../../constants/colors";
+import device from "../../constants/breakpoints";
 import ChevroletLogo from "../../assets/ChevroletLogo.png";
 import NewBalanceLogo from "../../assets/NewBalanceLogo.png";
 import StregaLogo from "../../assets/StregaLogo.png";
@@ -17,6 +18,26 @@ const SponsorsContainer = styled.div`
   margin: 0 2em;
   padding: 2.5em;
   border: 1.5px solid ${colors.orange1};
+
+  @media ${device.tablet} {
+    margin: 0 1em;
+  }
+
+  @media ${device.mobile} {
+    margin: 0em;
+  }
+`;
+
+const SponsorsImage = styled.img`
+  height: 60px;
+
+  @media ${device.tablet} {
+    height: 40px;
+  }
+
+  @media ${device.mobile} {
+    height: 30px;
+  }
 `;
 
 const sponsors = [
@@ -50,7 +71,7 @@ const Sponsors = () => {
   return (
     <SponsorsContainer>
       {sponsors.map((sponsor: ISponsor) => (
-        <img height={60} src={sponsor.logo} alt={sponsor.name} />
+        <SponsorsImage src={sponsor.logo} alt={sponsor.name} />
       ))}
     </SponsorsContainer>
   );

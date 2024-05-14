@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import styled from "styled-components";
+import device from "../../constants/breakpoints";
 import WhatIsJSXVideo from "../../assets/WhatIsJSX.mp4";
 import PlayIcon from "../../assets/PlayIcon.png";
 
@@ -8,8 +9,16 @@ const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 2.5em;
+  margin: 0 2em;
   gap: 1em;
+
+  @media ${device.tablet} {
+    margin: 0 1em;
+  }
+
+  @media ${device.mobile} {
+    margin: 0em;
+  }
 `;
 
 const Video = styled.video`
